@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="785.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.lightofdragons.GameController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="785.0" layoutY="27.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@WoodTable.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="785.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Games">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Save Game" />
+                  <MenuItem mnemonicParsing="false" text="Load Game" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="TODO" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Anleitung">
+                     <graphic>
+                        <MenuButton fx:id="anleitungButton" mnemonicParsing="false" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="155.0" layoutY="121.0" prefHeight="342.0" prefWidth="385.0">
+         <children>
+            <GridPane fx:id="UIbattlefield" alignment="CENTER" gridLinesVisible="true" hgap="1.0" layoutX="27.0" layoutY="31.0" prefHeight="300.0" prefWidth="350.0" vgap="1.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="52.750999816894534" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="0.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@Ruin.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@Ruin.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@Ruin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <Label layoutX="8.0" layoutY="44.0" text="1" />
+            <Label layoutX="8.0" layoutY="87.0" text="2" />
+            <Label layoutX="8.0" layoutY="130.0" text="3" />
+            <Label layoutX="8.0" layoutY="172.0" text="4" />
+            <Label layoutX="8.0" layoutY="219.0" text="5" />
+            <Label layoutX="8.0" layoutY="261.0" text="6" />
+            <Label layoutX="8.0" layoutY="307.0" text="7" />
+            <Label layoutX="7.0" layoutY="22.0" text="Y:" />
+            <Label layoutX="46.0" layoutY="12.0" text="1" />
+            <Label layoutX="96.0" layoutY="12.0" text="2" />
+            <Label layoutX="146.0" layoutY="13.0" text="3" />
+            <Label layoutX="198.0" layoutY="12.0" text="4" />
+            <Label layoutX="248.0" layoutY="12.0" text="5" />
+            <Label layoutX="296.0" layoutY="12.0" text="6" />
+            <Label layoutX="339.0" layoutY="12.0" text="7" />
+            <Label layoutX="22.0" layoutY="12.0" text="X:" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="541.0" layoutY="210.0" prefHeight="164.0" prefWidth="242.0">
+         <children>
+            <Button fx:id="endTurn" layoutX="158.0" layoutY="138.0" mnemonicParsing="false" text="Zug beenden">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Accordion layoutY="90.0" />
+            <Accordion layoutX="30.0" layoutY="125.0" />
+            <Button fx:id="moveButton" layoutX="85.0" layoutY="138.0" mnemonicParsing="false" text="bewegen">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="magicButton" layoutX="177.0" layoutY="101.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="63.0" text="magie">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="upgradeButton" layoutX="177.0" layoutY="70.0" mnemonicParsing="false" text="aufwerten">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="newDiceButton" layoutY="137.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="73.0" text="neuer würfel">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label fx:id="outputLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="14.0" prefHeight="18.0" prefWidth="194.0" text="OutputLabel" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="magicPoints" layoutX="153.0" layoutY="33.0" mnemonicParsing="false" text="magie Punkte" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Region layoutX="211.0" layoutY="472.0" opacity="0.6" prefHeight="79.0" prefWidth="294.0" style="-fx-background-color: white; -fx-opacity: .4;">
+         <effect>
+            <GaussianBlur />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Region>
+      <Region layoutX="211.0" layoutY="39.0" opacity="0.6" prefHeight="79.0" prefWidth="294.0" style="-fx-background-color: white; -fx-opacity: .4;">
+         <effect>
+            <BoxBlur />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Region>
+      <FlowPane fx:id="exilePane" layoutX="22.0" layoutY="229.0" opacity="0.54" prefHeight="109.0" prefWidth="130.0" style="-fx-background-color: #431c01;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+      </FlowPane>
+      <Label fx:id="pl1Label" layoutX="354.0" layoutY="485.0" text="Player 1" textAlignment="CENTER" wrapText="true">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Label fx:id="pl2Label" layoutX="346.0" layoutY="48.0" text="Player 2" textAlignment="CENTER" wrapText="true">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Label layoutX="230.0" layoutY="494.0" text="Siegpunkte:" />
+      <Label layoutX="225.0" layoutY="523.0" text="MagiePunkte:" />
+      <Label layoutX="222.0" layoutY="57.0" text="Siegpunkte:" />
+      <Label layoutX="216.0" layoutY="87.0" text="MagiePunkte:" />
+      <Label fx:id="sPLabel2" layoutX="318.0" layoutY="57.0" />
+      <Label fx:id="mPLabel2" layoutX="304.0" layoutY="87.0" />
+      <Label fx:id="sPLabel1" layoutX="312.0" layoutY="494.0" />
+      <Label fx:id="mPLabel1" layoutX="312.0" layoutY="523.0" />
+      <FlowPane fx:id="player2FP" layoutX="558.0" layoutY="34.0" opacity="0.2" prefHeight="89.0" prefWidth="138.0" style="-fx-background-color: #7e3200; -fx-opacity: .2;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+      </FlowPane>
+      <FlowPane fx:id="player1FP" layoutX="558.0" layoutY="467.0" prefHeight="89.0" prefWidth="138.0" style="-fx-background-color: #7e3200; -fx-opacity: .2;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+      </FlowPane>
+      <Label fx:id="pl1ColorLabel" layoutX="421.0" layoutY="485.0" text=" " />
+      <Label fx:id="pl2ColorLabel" layoutX="399.0" layoutY="49.0" text=" " />
+   </children>
+</AnchorPane>
